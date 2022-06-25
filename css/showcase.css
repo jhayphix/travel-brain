@@ -1,0 +1,286 @@
+/* -----------SHOWCASE SECTION---------------*/
+.fa-road {
+  font-size: 15px;
+}
+
+.showcase-section {
+  width: 100vw;
+  height: 380px;
+  position: relative;
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+
+  background: linear-gradient(
+    to bottom,
+    var(--accent-color),
+    var(--primary-blue)
+  );
+}
+
+/* ----- Brand ------ */
+.showcase-section .brand-container {
+  color: white;
+  width: 550px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: 2px solid var(--secondary-white);
+  border-right: 2px solid var(--secondary-white);
+
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 5;
+}
+
+.brand-container .brand-name {
+  font-size: 60px;
+  font-weight: bolder;
+  color: blue;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary-blue) 10%,
+    var(--accent-color) 40%,
+    white 80%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mos-text-fill-color: transparent;
+}
+
+.brand-container .brand-name-blog {
+  font-size: 45px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 10px;
+
+  background-image: linear-gradient(
+    to bottom,
+    white 30%,
+    var(--accent-color),
+    var(--secondary-blue)
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mos-text-fill-color: transparent;
+}
+
+.brand-container .brand-slogan {
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+/* ----- Slide Show ------- */
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides-img-container {
+  width: 100%;
+  height: 100%;
+}
+.slides-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----- Next & previous buttons ----- */
+.slideshow-prev-btn,
+.slideshow-next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 20;
+}
+
+.slideshow-next-btn {
+  padding-right: 30px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-prev-btn:hover,
+.slideshow-next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ---- The dots/bullets/indicators ------ */
+.showcase-section .dot-container {
+  text-align: center;
+  margin: -5vh;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--secondary-white);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+  background-color: var(--secondary-blue);
+}
+
+/* ----- Fading animation ----- */
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+} */
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* -----------SHOWCASE SECTION---------------*/
+/* ------------------------------------------------------ */
+
+/* ------------------------------------------------------ */
+
+/* ----------- MOBILE RESPONSIVE ---------------*/
+@media only screen and (max-width: 790px) {
+  .showcase-section .brand-container {
+    width: 450px;
+  }
+
+  .brand-container .brand-name {
+    font-size: 50px;
+  }
+
+  .brand-container .brand-name-blog {
+    font-size: 40px;
+  }
+
+  .brand-container .brand-slogan {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .showcase-section .brand-container {
+    width: 400px;
+  }
+
+  .brand-container .brand-name {
+    font-size: 45px;
+  }
+
+  .brand-container .brand-name-blog {
+    font-size: 35px;
+  }
+
+  .brand-container .brand-slogan {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .showcase-section {
+    height: 300px;
+  }
+  .showcase-section .brand-container {
+    width: 370px;
+  }
+
+  .brand-container .brand-name {
+    font-size: 40px;
+  }
+
+  .brand-container .brand-name-blog {
+    font-size: 30px;
+  }
+  .brand-container .brand-slogan {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .showcase-section .brand-container {
+    width: 300px;
+    /* top: 30%; */
+    left: 10%;
+  }
+
+  .brand-container .brand-name {
+    font-size: 30px;
+  }
+
+  .brand-container .brand-name-blog {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .brand-container .brand-slogan {
+    opacity: 0.9;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .showcase-section {
+    height: 280px;
+  }
+  .showcase-section .brand-container {
+    width: 250px;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .brand-container .brand-name {
+    font-size: 25px;
+  }
+
+  .brand-container .brand-name-blog {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .slideshow-next-btn {
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .slideshow-prev-btn,
+  .slideshow-next-btn,
+  .text {
+    font-size: 11px;
+  }
+}

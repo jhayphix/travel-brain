@@ -1,0 +1,201 @@
+/* THIS WORKS ON MAIN AND SUB BANNERS */
+
+.outermost-banner-news-container {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 10px;
+}
+
+/* NAVIGATE PAGES CONTAINER */
+.navigate-pages-links-container {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+.navigate-pages-links-container a {
+  color: black;
+}
+
+.navigate-page-link {
+  margin-right: 10px;
+}
+
+.navigate-page-link.navigate-non-current {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  opacity: 0.8;
+  color: #333;
+}
+.navigate-page-link.navigate-non-current:hover {
+  color: var(--primary-blue);
+  opacity: 1;
+}
+.navigate-page-link.navigate-current {
+  opacity: 0.5;
+}
+
+/* END OF NAVIGATE PAGES CONTAINER */
+/* ------- MAIN BANNER NEWS CONTROL ------ */
+
+.main-banner-news-container {
+  height: 100%;
+  position: relative;
+}
+.main-banner-news-control {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main-banner-news-control::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-banner-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.main-banner-news-img.img-hover {
+  transform: scale(1.2);
+}
+
+.main-banner-text-container {
+  color: white;
+  width: 80%;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  z-index: 10;
+  overflow: hidden;
+}
+.main-banner-news-heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1.5px;
+}
+
+.main-banner-news-heading.heading-hover {
+  text-decoration: underline;
+}
+
+/* THIS STYLE SHEET WORKS ON NEWS, SPORTS , ENTERTAINMENTS AND OTHER MAIN CATEGORY PAGES */
+
+/* -------- SUB BANNER NEWS CONTROL --------- */
+.subs-banner-news-container {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.sub-news-control {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.sub-news-control::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ----- Sub News Image------ */
+.sub-news-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-bottom: 4px solid rgb(60, 255, 0);
+}
+.sub-news-img.img-hover {
+  transform: scale(1.2);
+}
+
+/* ----- Sub News Text ------ */
+.sub-news-text-container {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  z-index: 10;
+}
+.sub-news-heading {
+  font-size: 16px;
+}
+.sub-news-heading.heading-hover {
+  text-decoration: underline;
+}
+
+/* ------------- MOBILE RESPONSIVE ------------ */
+@media only screen and (max-width: 670px) {
+  .outermost-banner-news-container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    min-height: 400px;
+    grid-template-columns: 1fr;
+  }
+  .subs-banner-news-container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+  }
+
+  .sub-news-control {
+    width: 250px;
+    height: 220px;
+  }
+  .sub-news-img.img-hover {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 670px) {
+  .outermost-banner-news-container {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main-banner-text-container {
+    top: 65%;
+    width: 85%;
+  }
+
+  .sub-news-control {
+    width: 180px;
+    height: 200px;
+  }
+  .sub-news-heading {
+    font-size: 14px;
+  }
+  .sub-news-text-container {
+    top: 65%;
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main-banner-text-container {
+    top: 55%;
+    width: 90%;
+  }
+}
